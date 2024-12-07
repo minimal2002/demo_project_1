@@ -1,3 +1,4 @@
+import 'package:demo_project_1/Pages/loginPage.dart';
 import 'package:demo_project_1/Pages/registerPage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       title: 'Flutter Demo',
-      home: Registerpage(),
+      home: Loginpage(),
     );
   }
 }
