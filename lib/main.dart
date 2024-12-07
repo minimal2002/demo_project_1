@@ -1,3 +1,5 @@
+import 'package:demo_project_1/Pages/%E0%B8%B5user/homePage.dart';
+import 'package:demo_project_1/Pages/%E0%B8%B5user/main_drawer.dart';
 import 'package:demo_project_1/Pages/loginPage.dart';
 import 'package:demo_project_1/Pages/registerPage.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(textTheme: GoogleFonts.notoSansThaiTextTheme()),
-      home: Login(),
+      home: MainDrawer(),
     );
   }
 }
