@@ -3,6 +3,7 @@ import 'package:demo_project_1/Pages/%E0%B8%B5user/main_drawer.dart';
 import 'package:demo_project_1/Pages/loginPage.dart';
 import 'package:demo_project_1/Pages/registerPage.dart';
 import 'package:demo_project_1/Pages/registerUserPage.dart';
+import 'package:demo_project_1/firstPage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(textTheme: GoogleFonts.notoSansThaiTextTheme()),
-      home: MainDrawer(),
+      home: Firstpage(),
     );
   }
 }
