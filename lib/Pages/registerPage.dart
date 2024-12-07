@@ -10,6 +10,25 @@ class Registerpage extends StatefulWidget {
 class _RegisterpageState extends State<Registerpage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    final screenHeight = MediaQuery.of(context).size.height;
+    final screenWidth = MediaQuery.of(context).size.width;
+    return const Scaffold(
+      // appBar: AppBar(
+      // ),
+      backgroundColor: Color(0xffD0E4FF),
+      body: Padding(
+        padding: EdgeInsets.all(8.0),
+        child: const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Column(
+              children: [
+                Text('RoomMatch')
+              ],
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
