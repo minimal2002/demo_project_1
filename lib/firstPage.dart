@@ -1,4 +1,6 @@
+import 'package:demo_project_1/Pages/user/main_drawer.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Firstpage extends StatefulWidget {
   const Firstpage({super.key});
@@ -9,23 +11,26 @@ class Firstpage extends StatefulWidget {
 
 class _FirstpageState extends State<Firstpage> {
   @override
+  void initState() {
+    super.initState();
+    // navigating to Homepage
+    Future.delayed(const Duration(seconds: 3), () {
+      Get.off(() => const MainDrawer());
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: const Text("First Page"),
-      // ),
       backgroundColor: const Color(0xffD0E4FF),
-
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // โลโก้
+            // Logo
             Image.asset(
-              'assets/images/Roommatch2.gif'
-, // เปลี่ยนเส้นทางตามตำแหน่งไฟล์โลโก้ของคุณ
-              width: double.infinity, // กำหนดขนาดของโลโก้
-              // height: 150,
+              'assets/images/Roommatchh.gif',
+              width: double.infinity,
             ),
           ],
         ),

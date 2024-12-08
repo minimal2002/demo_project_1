@@ -1,4 +1,6 @@
+import 'package:demo_project_1/Pages/user/DetailPage.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -11,7 +13,6 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
-    final screenWidth = MediaQuery.of(context).size.width;
     final List<Map<String, dynamic>> dorms = [
       {
         'image': 'assets/images/bb.jpg',
@@ -80,64 +81,69 @@ class _HomepageState extends State<Homepage> {
                 itemCount: dorms.length,
                 itemBuilder: (context, index) {
                   final dorm = dorms[index];
-                  return Card(
-                    margin: const EdgeInsets.symmetric(vertical: 10.0),
-                    color: Colors.grey[100],
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Image.asset(
-                          dorm['image'],
-                          fit: BoxFit.cover,
-                          width: double.infinity,
-                          height: 240.0,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    dorm['name'],
-                                    style: const TextStyle(
-                                        fontSize: 18.0,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black),
-                                  ),
-                                  Text(
-                                    dorm['distance'],
-                                    style: const TextStyle(
-                                      fontSize: 16.0,
-                                      color: Color(0xff3AA6FF),
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: screenHeight * 0.01),
-                              Text(
-                                dorm['description'],
-                                style: TextStyle(
-                                  fontSize: 14.0,
-                                  color: Colors.black,
-                                ),
-                              ),
-                               SizedBox(height: screenHeight * 0.01),
-                              Text(
-                                dorm['coordinates'],
-                                style: TextStyle(
-                                  fontSize: 14.0,
-                                  color: Colors.red,
-                                ),
-                              ),
-                            ],
+                  return GestureDetector(
+                    onTap: () {
+                     Get.to(() => const Detailpage());
+                    },
+                    child: Card(
+                      margin: const EdgeInsets.symmetric(vertical: 10.0),
+                      color: Colors.grey[100],
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Image.asset(
+                            dorm['image'],
+                            fit: BoxFit.cover,
+                            width: double.infinity,
+                            height: 240.0,
                           ),
-                        ),
-                      ],
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      dorm['name'],
+                                      style: const TextStyle(
+                                          fontSize: 18.0,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.black),
+                                    ),
+                                    Text(
+                                      dorm['distance'],
+                                      style: const TextStyle(
+                                        fontSize: 16.0,
+                                        color: Color(0xff3AA6FF),
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: screenHeight * 0.01),
+                                Text(
+                                  dorm['description'],
+                                  style: const TextStyle(
+                                    fontSize: 14.0,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                SizedBox(height: screenHeight * 0.01),
+                                Text(
+                                  dorm['coordinates'],
+                                  style: const TextStyle(
+                                    fontSize: 14.0,
+                                    color: Colors.red,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   );
                 },

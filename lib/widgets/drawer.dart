@@ -15,7 +15,7 @@ class MyDrawer extends StatelessWidget {
           padding: const EdgeInsets.only(top: 50.0, left: 10),
           child: Column(
             children: [
-              Image.asset('assets/images/1.png', height: 200),
+              Image.asset('assets/images/Logo.png', height: 250),
               const Padding(
                 padding: EdgeInsets.only(top: 10.0),
                 child: Text('Main Menu'),

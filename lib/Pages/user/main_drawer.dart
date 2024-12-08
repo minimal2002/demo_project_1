@@ -1,9 +1,9 @@
 import 'dart:developer';
-import 'package:demo_project_1/Pages/%E0%B8%B5user/accountPage.dart';
-import 'package:demo_project_1/Pages/%E0%B8%B5user/favoritePage.dart';
-import 'package:demo_project_1/Pages/%E0%B8%B5user/homePage.dart';
-import 'package:demo_project_1/Pages/%E0%B8%B5user/matchPage.dart';
-import 'package:demo_project_1/Pages/%E0%B8%B5user/searchPage.dart';
+import 'package:demo_project_1/Pages/user/accountPage.dart';
+import 'package:demo_project_1/Pages/user/favoritePage.dart';
+import 'package:demo_project_1/Pages/user/homePage.dart';
+import 'package:demo_project_1/Pages/user/matchPage.dart';
+import 'package:demo_project_1/Pages/user/searchPage.dart';
 import 'package:demo_project_1/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 
