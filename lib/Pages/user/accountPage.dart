@@ -12,7 +12,11 @@ class _AccountpageState extends State<Accountpage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: const Text('account'),
+      body: const Center(
+          child: Text(
+        'account',
+        style: TextStyle(fontSize: 30),
+      )),
     );
   }
 }

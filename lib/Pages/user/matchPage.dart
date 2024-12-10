@@ -52,7 +52,9 @@ class _MatchpageState extends State<Matchpage> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.to(() => const MainDrawer());
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xffD0E4FF),
                       padding: const EdgeInsets.symmetric(
