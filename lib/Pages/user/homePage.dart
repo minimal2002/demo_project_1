@@ -42,10 +42,10 @@ class _HomepageState extends State<Homepage> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: const Text(
+        title: Text(
           'RoomMatch',
           style: TextStyle(
-              color: Colors.white, fontWeight: FontWeight.bold, fontSize: 28),
+              color: Colors.white, fontWeight: FontWeight.bold, fontSize: Get.textTheme.headlineMedium?.fontSize),
         ),
         backgroundColor: const Color(0xff96B1E1),
         shape: const RoundedRectangleBorder(
@@ -59,7 +59,7 @@ class _HomepageState extends State<Homepage> {
         padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
         child: Column(
           children: [
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Icon(
@@ -72,7 +72,7 @@ class _HomepageState extends State<Homepage> {
                   style: TextStyle(
                       color: Color(0xff489EE6),
                       fontWeight: FontWeight.bold,
-                      fontSize: 20),
+                      fontSize: Get.textTheme.titleLarge?.fontSize),
                 ),
               ],
             ),
@@ -83,7 +83,7 @@ class _HomepageState extends State<Homepage> {
                   final dorm = dorms[index];
                   return GestureDetector(
                     onTap: () {
-                     Get.to(() => const Detailpage());
+                      Get.to(() => const Detailpage());
                     },
                     child: Card(
                       margin: const EdgeInsets.symmetric(vertical: 10.0),
@@ -108,15 +108,15 @@ class _HomepageState extends State<Homepage> {
                                   children: [
                                     Text(
                                       dorm['name'],
-                                      style: const TextStyle(
-                                          fontSize: 18.0,
+                                      style:  TextStyle(
+                                          fontSize: Get.textTheme.titleMedium?.fontSize,
                                           fontWeight: FontWeight.bold,
                                           color: Colors.black),
                                     ),
                                     Text(
                                       dorm['distance'],
-                                      style: const TextStyle(
-                                        fontSize: 16.0,
+                                      style:  TextStyle(
+                                        fontSize: Get.textTheme.bodyLarge?.fontSize,
                                         color: Color(0xff3AA6FF),
                                         fontWeight: FontWeight.bold,
                                       ),
@@ -126,16 +126,16 @@ class _HomepageState extends State<Homepage> {
                                 SizedBox(height: screenHeight * 0.01),
                                 Text(
                                   dorm['description'],
-                                  style: const TextStyle(
-                                    fontSize: 14.0,
+                                  style:  TextStyle(
+                                    fontSize: Get.textTheme.bodyMedium?.fontSize,
                                     color: Colors.black,
                                   ),
                                 ),
                                 SizedBox(height: screenHeight * 0.01),
                                 Text(
                                   dorm['coordinates'],
-                                  style: const TextStyle(
-                                    fontSize: 14.0,
+                                  style: TextStyle(
+                                    fontSize: Get.textTheme.bodyMedium?.fontSize,
                                     color: Colors.red,
                                   ),
                                 ),

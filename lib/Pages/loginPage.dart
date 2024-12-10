@@ -27,21 +27,21 @@ class _LoginpageState extends State<Loginpage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const Text(
+                     Text(
                       'RoomMatch',
                       style: TextStyle(
-                        fontSize: 40,
+                        fontSize: Get.textTheme.displaySmall?.fontSize,
                         fontWeight: FontWeight.bold,
-                        color: Color(0xff2C34FF),
+                        color: const Color(0xff2C34FF),
                       ),
                     ),
                     SizedBox(height: screenHeight * 0.05),
-                    const Align(
+                     Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
                         'Email',
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: Get.textTheme.titleLarge?.fontSize,
                         ),
                       ),
                     ),
@@ -61,11 +61,11 @@ class _LoginpageState extends State<Loginpage> {
                       ),
                     ),
                     SizedBox(height: screenHeight * 0.03),
-                    const Align(
+                     Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
                         'Password',
-                        style: TextStyle(fontSize: 20),
+                        style: TextStyle(fontSize: Get.textTheme.titleLarge?.fontSize),
                       ),
                     ),
                     SizedBox(height: screenHeight * 0.01),
@@ -102,12 +102,12 @@ class _LoginpageState extends State<Loginpage> {
                         onTap: () {
                           // Navigate to forgot password page
                         },
-                        child: const Text(
+                        child: Text(
                           'Forgot password?',
                           style: TextStyle(
-                            color: Color(0xff0701FF),
+                            color: const Color(0xff0701FF),
                             fontWeight: FontWeight.bold,
-                            fontSize: 18,
+                            fontSize: Get.textTheme.titleMedium?.fontSize,
                           ),
                         ),
                       ),
@@ -124,13 +124,13 @@ class _LoginpageState extends State<Loginpage> {
                           borderRadius: BorderRadius.circular(30),
                         ),
                       ),
-                      child: const SizedBox(
+                      child: SizedBox(
                         width: double.infinity,
                         child: Center(
                           child: Text(
                             'Login',
                             style: TextStyle(
-                                fontSize: 20,
+                                fontSize: Get.textTheme.titleMedium?.fontSize,
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -138,21 +138,21 @@ class _LoginpageState extends State<Loginpage> {
                       ),
                     ),
                     SizedBox(height: screenHeight * 0.04),
-                    const Row(
+                    Row(
                       children: [
-                        Expanded(
+                        const Expanded(
                             child: Divider(
                           thickness: 1,
                           color: Colors.black,
                         )),
                         Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 8.0),
+                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
                           child: Text(
                             'OR',
-                            style: TextStyle(color: Colors.black, fontSize: 18),
+                            style: TextStyle(color: Colors.black, fontSize: Get.textTheme.bodyLarge?.fontSize),
                           ),
                         ),
-                        Expanded(
+                        const Expanded(
                             child: Divider(
                           thickness: 1,
                           color: Colors.black,
@@ -164,18 +164,18 @@ class _LoginpageState extends State<Loginpage> {
                       onTap: () {
                         log('Let go!! Google');
                       },
-                      child: const Row(
+                      child:  Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Image(
+                          const Image(
                             image: AssetImage('assets/images/Google_logo.png'),
                             width: 28,
                             height: 28,
                           ),
-                          SizedBox(width: 10),
+                          const SizedBox(width: 10),
                           Text(
                             'Log in with Google',
-                            style: TextStyle(fontSize: 18),
+                            style: TextStyle(fontSize: Get.textTheme.titleMedium?.fontSize),
                           ),
                         ],
                       ),
@@ -192,10 +192,10 @@ class _LoginpageState extends State<Loginpage> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
+             Text(
               "Don’t have an account?",
               style: TextStyle(
-                fontSize: 18,
+                fontSize: Get.textTheme.titleMedium?.fontSize,
                 color: Colors.black,
               ),
             ),
@@ -204,11 +204,11 @@ class _LoginpageState extends State<Loginpage> {
                 Get.to(() => const UsertypePage());
                 log('Let go!! Sign up');
               },
-              child: const Text(
+              child: Text(
                 " Sign up",
                 style: TextStyle(
-                  fontSize: 18,
-                  color: Color(0xff0701FF),
+                  fontSize: Get.textTheme.titleMedium?.fontSize,
+                  color: const Color(0xff0701FF),
                   fontWeight: FontWeight.bold,
                 ),
               ),

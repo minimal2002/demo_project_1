@@ -19,10 +19,10 @@ class _MatchpageState extends State<Matchpage> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: const Text(
+        title: Text(
           'RoomMatch',
           style: TextStyle(
-              color: Colors.white, fontWeight: FontWeight.bold, fontSize: 28),
+              color: Colors.white, fontWeight: FontWeight.bold, fontSize: Get.textTheme.headlineMedium?.fontSize),
         ),
         backgroundColor: const Color(0xff96B1E1),
         shape: const RoundedRectangleBorder(
@@ -38,12 +38,12 @@ class _MatchpageState extends State<Matchpage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
+               Text(
                 'คุณกำลังมองหา Roommate ที่เข้ากันได้ใช่ไหม ?',
                 style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
-                  fontSize: 26,
+                  fontSize: Get.textTheme.headlineSmall?.fontSize,
                 ),
                 textAlign: TextAlign.start,
               ),
@@ -61,10 +61,10 @@ class _MatchpageState extends State<Matchpage> {
                         borderRadius: BorderRadius.circular(17),
                       ),
                     ),
-                    child: const Text(
+                    child:  Text(
                       'ไม่',
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: Get.textTheme.titleLarge?.fontSize,
                         fontWeight: FontWeight.bold,
                         color: Color(0xff555555),
                       ),
@@ -83,10 +83,10 @@ class _MatchpageState extends State<Matchpage> {
                         borderRadius: BorderRadius.circular(17),
                       ),
                     ),
-                    child: const Text(
+                    child: Text(
                       'ใช่',
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: Get.textTheme.titleLarge?.fontSize,
                         fontWeight: FontWeight.bold,
                         color: Color(0xff555555),
                       ),

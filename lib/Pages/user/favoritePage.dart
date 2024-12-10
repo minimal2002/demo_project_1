@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class Favoritepage extends StatefulWidget {
   const Favoritepage({super.key});
@@ -44,10 +45,10 @@ class _FavoritepageState extends State<Favoritepage> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: const Text(
+        title: Text(
           'RoomMatch',
           style: TextStyle(
-              color: Colors.white, fontWeight: FontWeight.bold, fontSize: 28),
+              color: Colors.white, fontWeight: FontWeight.bold, fontSize: Get.textTheme.headlineMedium?.fontSize),
         ),
         backgroundColor: const Color(0xff96B1E1),
         shape: const RoundedRectangleBorder(

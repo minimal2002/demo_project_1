@@ -31,7 +31,7 @@ class _RegisterpageState extends State<Registerpage> {
                     style: TextStyle(
                       color: const Color(0xff2C34FF),
                       fontWeight: FontWeight.bold,
-                      fontSize: Get.textTheme.headlineLarge?.fontSize,
+                      fontSize: Get.textTheme.displaySmall?.fontSize,
                     ),
                   ),
                 ],
