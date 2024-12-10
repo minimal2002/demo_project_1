@@ -1,4 +1,5 @@
 import 'package:demo_project_1/Pages/dorm%20owner/homeOwner.dart';
+import 'package:demo_project_1/Pages/dorm%20owner/main_drawer_owner.dart';
 import 'package:demo_project_1/Pages/user/homePage.dart';
 import 'package:demo_project_1/Pages/user/main_drawer.dart';
 import 'package:demo_project_1/Pages/loginPage.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(textTheme: GoogleFonts.notoSansThaiTextTheme()),
-      home: Homeowner(),
+      home: MainDrawerOwner(),
     );
   }
 }
