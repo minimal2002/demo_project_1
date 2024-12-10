@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(textTheme: GoogleFonts.notoSansThaiTextTheme()),
-      home: Homeowner(),
+      home: MainDrawer(),
     );
   }
 }

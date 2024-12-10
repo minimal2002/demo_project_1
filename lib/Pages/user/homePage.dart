@@ -45,7 +45,9 @@ class _HomepageState extends State<Homepage> {
         title: Text(
           'RoomMatch',
           style: TextStyle(
-              color: Colors.white, fontWeight: FontWeight.bold, fontSize: Get.textTheme.headlineMedium?.fontSize),
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: Get.textTheme.headlineMedium?.fontSize),
         ),
         backgroundColor: const Color(0xff96B1E1),
         shape: const RoundedRectangleBorder(
@@ -96,6 +98,14 @@ class _HomepageState extends State<Homepage> {
                             fit: BoxFit.cover,
                             width: double.infinity,
                             height: 240.0,
+                            errorBuilder: (context, error, stackTrace) {
+                              return const Center(
+                                child: Text(
+                                  'Cannot load image',
+                                  textAlign: TextAlign.center,
+                                ),
+                              );
+                            },
                           ),
                           Padding(
                             padding: const EdgeInsets.all(10.0),
@@ -108,15 +118,17 @@ class _HomepageState extends State<Homepage> {
                                   children: [
                                     Text(
                                       dorm['name'],
-                                      style:  TextStyle(
-                                          fontSize: Get.textTheme.titleMedium?.fontSize,
+                                      style: TextStyle(
+                                          fontSize: Get
+                                              .textTheme.titleMedium?.fontSize,
                                           fontWeight: FontWeight.bold,
                                           color: Colors.black),
                                     ),
                                     Text(
                                       dorm['distance'],
-                                      style:  TextStyle(
-                                        fontSize: Get.textTheme.bodyLarge?.fontSize,
+                                      style: TextStyle(
+                                        fontSize:
+                                            Get.textTheme.bodyLarge?.fontSize,
                                         color: Color(0xff3AA6FF),
                                         fontWeight: FontWeight.bold,
                                       ),
@@ -126,8 +138,9 @@ class _HomepageState extends State<Homepage> {
                                 SizedBox(height: screenHeight * 0.01),
                                 Text(
                                   dorm['description'],
-                                  style:  TextStyle(
-                                    fontSize: Get.textTheme.bodyMedium?.fontSize,
+                                  style: TextStyle(
+                                    fontSize:
+                                        Get.textTheme.bodyMedium?.fontSize,
                                     color: Colors.black,
                                   ),
                                 ),
@@ -135,7 +148,8 @@ class _HomepageState extends State<Homepage> {
                                 Text(
                                   dorm['coordinates'],
                                   style: TextStyle(
-                                    fontSize: Get.textTheme.bodyMedium?.fontSize,
+                                    fontSize:
+                                        Get.textTheme.bodyMedium?.fontSize,
                                     color: Colors.red,
                                   ),
                                 ),
